@@ -186,7 +186,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst movieItem = ({ title, posterPath, voteAverage }) => {\n    const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';\n    const originalImageUrl = `${IMAGE_BASE_URL}${posterPath}`;\n    const alternativeImageUrl = './assets/no_image.png';\n    const imageUrl = posterPath ? originalImageUrl : alternativeImageUrl;\n    return `\n    <li>\n      <a href=\"#\">\n        <div class=\"item-card\">\n          <img\n            class=\"item-thumbnail\"\n            src=\"${imageUrl}\"\n            loading=\"lazy\"\n            alt=\"${title}\" />\n          <p class=\"item-title\">${title}</p>\n          <p class=\"item-score\"><img src=\"./assets/star_filled.png\" alt=\"별점\" /> ${voteAverage}</p>\n        </div>\n      </a>\n    </li>`;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (movieItem);\n\n\n//# sourceURL=webpack://javascript-movie-review/./src/components/movieItem.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _constants_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/constants */ \"./src/constants/constants.ts\");\n\nconst movieItem = ({ title, posterPath, voteAverage }) => {\n    const originalImageUrl = `${_constants_constants__WEBPACK_IMPORTED_MODULE_0__.IMAGE_URL.BASE}${posterPath}`;\n    const imageUrl = posterPath ? originalImageUrl : _constants_constants__WEBPACK_IMPORTED_MODULE_0__.IMAGE_URL.ALTERNATIVE;\n    return `\n    <li>\n      <a href=\"#\">\n        <div class=\"item-card\">\n          <img\n            class=\"item-thumbnail\"\n            src=\"${imageUrl}\"\n            loading=\"lazy\"\n            alt=\"${title}\" />\n          <p class=\"item-title\">${title}</p>\n          <p class=\"item-score\"><img src=\"./assets/star_filled.png\" alt=\"별점\" /> ${voteAverage}</p>\n        </div>\n      </a>\n    </li>`;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (movieItem);\n\n\n//# sourceURL=webpack://javascript-movie-review/./src/components/movieItem.ts?");
 
 /***/ }),
 
@@ -197,6 +197,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst skeletonItem = () => {\n    return `\n    <li class=\"skeleton-item\">\n      <a href=\"#\">\n        <div class=\"item-card\">\n          <div class=\"item-thumbnail skeleton\"></div>\n          <div class=\"item-title skeleton\"></div>\n          <div class=\"item-score skeleton\"></div>\n        </div>\n      </a>\n    </li>`;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (skeletonItem);\n\n\n//# sourceURL=webpack://javascript-movie-review/./src/components/skeletonItem.ts?");
+
+/***/ }),
+
+/***/ "./src/constants/constants.ts":
+/*!************************************!*\
+  !*** ./src/constants/constants.ts ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"IMAGE_URL\": () => (/* binding */ IMAGE_URL)\n/* harmony export */ });\nvar IMAGE_URL;\n(function (IMAGE_URL) {\n    IMAGE_URL[\"BASE\"] = \"https://image.tmdb.org/t/p/original\";\n    IMAGE_URL[\"ALTERNATIVE\"] = \"./assets/no_image.png\";\n})(IMAGE_URL || (IMAGE_URL = {}));\n\n\n//# sourceURL=webpack://javascript-movie-review/./src/constants/constants.ts?");
 
 /***/ }),
 
